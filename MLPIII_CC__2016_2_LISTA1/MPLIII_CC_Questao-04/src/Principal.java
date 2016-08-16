@@ -7,36 +7,36 @@ public class Principal {
 	public static void main(String[] args) throws Exception {
 		Fita fita;
 		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("                     LOCADORA DE FITAS\n" + "                     CADASTRO DE PRE«OS");
-		System.out.println("1. LanÁamentos\n2. Infantis");
-		System.out.println("\nInforme o gÍnero que deseja cadastrar.");
+		System.out.println("                     LOCADORA DE FITAS\n" + "                     CADASTRO DE PRE√áOS");
+		System.out.println("1. Lan√ßamentos\n2. Infantis");
+		System.out.println("\nInforme o g√™nero que deseja cadastrar.");
 		int opcao = Integer.parseInt(buffer.readLine());
 
-		// TÕTULO DO FILME(ENTRADA)
-		System.out.println("Informe o tÌtulo do filme:");
+		// T√çTULO DO FILME(ENTRADA)
+		System.out.println("Informe o t√≠tulo do filme:");
 		String titulo = buffer.readLine();
 
-		// PRE«O DO FILME(ENTRADA)
-		System.out.println("Informe o preÁo do filme:");
+		// PRE√áO DO FILME(ENTRADA)
+		System.out.println("Informe o pre√ßo do filme:");
 		double preco = Double.parseDouble(buffer.readLine());
 
 		switch (opcao) {
 		case 1: {
 			fita = new FitaLancamento(titulo, preco);
 
-		// TÕTULO, PRE«O ORIGINAL E PRE«O REAJUSTADO (SAÕDA COM AS IMPRESS’ES)
+		// T√çTULO, PRE√áO ORIGINAL E PRE√áO REAJUSTADO (SA√çDA COM AS IMPRESS√ïES)
 			System.out.println(
-					"\nTÌtulo do filme.: " + fita.getTitulo() + "\nValor informado.: R$ " + String.format("%.2f", preco)
-							+ "\nPreÁo reajustado: R$ " + String.format("%.2f", fita.getPreco()));
+					"\nT√≠tulo do filme.: " + fita.getTitulo() + "\nValor informado.: R$ " + String.format("%.2f", preco)
+							+ "\nPre√ßo reajustado: R$ " + String.format("%.2f", fita.getPreco()));
 			break;
 		}
 		case 2: {
 			fita = new FitaInfantil(titulo, preco);
 
-		// TÕTULO, PRE«O ORIGINAL E PRE«O DESCONTADO(SAÕDA COM AS IMPRESS’ES)
+		// T√çTULO, PRE√áO ORIGINAL E PRE√áO DESCONTADO (SA√çDA COM AS IMPRESS√ïES)
 			System.out.println(
-					"\nTÌtulo do filme.: " + fita.getTitulo() + "\nValor informado.: R$ " + String.format("%.2f", preco)
-							+ "\nPreÁo descontato: R$ " + String.format("%.2f", fita.getPreco()));
+					"\nT√≠tulo do filme.: " + fita.getTitulo() + "\nValor informado.: R$ " + String.format("%.2f", preco)
+							+ "\nPre√ßo descontato: R$ " + String.format("%.2f", fita.getPreco()));
 			break;
 		}
 		default:
